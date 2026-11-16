@@ -1,0 +1,95 @@
+{
+  "name": "pdf-signature",
+  "productName": "PDF Signature",
+  "version": "1.0.1",
+  "description": "Free, offline PDF signer for Windows: sign PDFs with a drawn, typed or uploaded signature, fill PDF forms, add text, dates and checkmarks.",
+  "keywords": [
+    "pdf",
+    "sign-pdf",
+    "pdf-signature",
+    "e-signature",
+    "electronic-signature",
+    "pdf-signer",
+    "fill-pdf-form",
+    "pdf-form-filler",
+    "signature-pad",
+    "pdf-editor",
+    "electron",
+    "pdfjs",
+    "pdf-lib",
+    "windows",
+    "offline",
+    "docusign-alternative"
+  ],
+  "homepage": "https://asadal12.github.io/pdf-signature/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asadal12/pdf-signature.git"
+  },
+  "bugs": {
+    "url": "https://github.com/asadal12/pdf-signature/issues"
+  },
+  "main": "main.js",
+  "author": "Ali Arshad Sadal",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . \"PDF Signature\" --platform=win32 --arch=x64 --out=dist --overwrite --asar --icon=build/icon.ico --ignore=^/dist --ignore=^/test",
+    "dist": "electron-builder --win nsis --x64"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "electron": "^45.3.3",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "app.pdfsignature.desktop",
+    "productName": "PDF Signature",
+    "copyright": "Ali Arshad Sadal",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "package.json",
+      "src/**/*",
+      "build/icon.png"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PDF Signature",
+      "artifactName": "PDF-Signature-Setup-${version}.exe",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico"
+    },
+    "fileAssociations": [
+      {
+        "ext": "pdf",
+        "name": "PDF Document",
+        "description": "PDF Document",
+        "role": "Editor",
+        "icon": "build/icon.ico"
+      }
+    ],
+    "publish": null
+  }
+}

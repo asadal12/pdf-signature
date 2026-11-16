@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDF Signature: Free Offline PDF Signer & Form Filler for Windows</title>
+<meta name="description" content="Sign PDF documents and fill PDF forms on Windows for free. Draw, type or upload your signature, add text, dates and checkmarks. Works offline, no account, no upload. Open source.">
+<meta name="keywords" content="sign PDF, PDF signer, PDF signature app, free e-signature, electronic signature Windows, fill and sign PDF, PDF form filler, add signature to PDF, offline PDF signing, DocuSign alternative, Adobe Fill and Sign alternative">
+<meta name="author" content="Ali Arshad Sadal">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://asadal12.github.io/pdf-signature/">
+<link rel="icon" type="image/png" href="icon.png">
+<meta name="theme-color" content="#2563eb">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PDF Signature">
+<meta property="og:title" content="PDF Signature: Free Offline PDF Signer for Windows">
+<meta property="og:description" content="Sign PDFs and fill PDF forms on Windows. Draw, type or upload your signature. Free, offline, open source.">
+<meta property="og:url" content="https://asadal12.github.io/pdf-signature/">
+<meta property="og:image" content="https://asadal12.github.io/pdf-signature/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="PDF Signature app signing a lease agreement">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PDF Signature: Free Offline PDF Signer for Windows">
+<meta name="twitter:description" content="Sign PDFs and fill PDF forms on Windows. Free, offline, open source.">
+<meta name="twitter:image" content="https://asadal12.github.io/pdf-signature/social-preview.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PDF Signature",
+  "alternateName": "PDF Signature: Sign Any PDF Document",
+  "description": "Free, offline PDF signer and PDF form filler for Windows. Draw, type or upload your signature, fill in fillable PDF forms, and add text, dates, checkmarks and images.",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "PDF signing",
+  "operatingSystem": "Windows 10, Windows 11",
+  "softwareVersion": "1.0.1",
+  "license": "https://opensource.org/licenses/MIT",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "downloadUrl": "https://github.com/asadal12/pdf-signature/releases/latest",
+  "url": "https://asadal12.github.io/pdf-signature/",
+  "image": "https://asadal12.github.io/pdf-signature/social-preview.png",
+  "screenshot": "https://asadal12.github.io/pdf-signature/screenshots/editor.png",
+  "author": { "@type": "Person", "name": "Ali Arshad Sadal" },
+  "codeRepository": "https://github.com/asadal12/pdf-signature",
+  "featureList": [
+    "Draw a signature with mouse, finger or stylus (pen pressure)",
+    "Type a signature in 8 handwriting fonts",
+    "Upload a signature image with automatic background removal",
+    "Fill in fillable PDF forms (AcroForm)",
+    "Click-to-sign signature fields",
+    "Add text, dates, checkmarks, crosses and images",
+    "Works offline, no account, no upload"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is PDF Signature free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PDF Signature is free and open source under the MIT license, with no ads, no watermark and no sign-up." } },
+    { "@type": "Question", "name": "Are my PDF documents uploaded anywhere?", "acceptedAnswer": { "@type": "Answer", "text": "No. Everything runs locally on your Windows PC and the app works fully offline." } },
+    { "@type": "Question", "name": "Can I fill out PDF forms?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fillable PDF forms (AcroForm) are supported: text fields, checkboxes, radio buttons, dropdowns and signature fields. Filled fields stay editable in the saved PDF." } },
+    { "@type": "Question", "name": "Is the signature legally binding?", "acceptedAnswer": { "@type": "Answer", "text": "PDF Signature adds a visual electronic signature (an image of your handwritten signature), which is accepted for many everyday documents. It is not a certificate-based cryptographic digital signature (PAdES/QES), which some legal processes require." } }
+  ]
+}
+</script>
+<style>
+  :root { --accent:#2563eb; --accent2:#1d4ed8; --text:#14171f; --muted:#5b6372; --bg:#f6f8fc; --card:#fff; --border:#e2e6ee; }
+  @media (prefers-color-scheme: dark) { :root { --text:#eceef2; --muted:#a7adba; --bg:#15171c; --card:#1f2229; --border:#30343d; } }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif; color:var(--text); background:var(--bg); line-height:1.55; }
+  a { color:var(--accent); }
+  .wrap { max-width:1120px; margin:0 auto; padding:0 24px; }
+  header.hero { background:linear-gradient(120deg,#2563eb,#1e40af); color:#fff; padding:28px 0 72px; }
+  nav { display:flex; align-items:center; justify-content:space-between; margin-bottom:52px; }
+  nav .brand { display:flex; align-items:center; gap:12px; font-weight:700; font-size:20px; color:#fff; text-decoration:none; }
+  nav .brand img { width:40px; height:40px; }
+  nav .links a { color:#dbe6ff; text-decoration:none; margin-left:22px; font-weight:500; }
+  nav .links a:hover { color:#fff; }
+  .hero-grid { display:grid; grid-template-columns: 1fr 1.25fr; gap:44px; align-items:center; }
+  h1 { font-size:46px; line-height:1.12; margin:0 0 18px; letter-spacing:-.02em; }
+  .lead { font-size:19px; color:#e3ebff; margin:0 0 28px; }
+  .btn { display:inline-flex; align-items:center; gap:10px; padding:14px 24px; border-radius:12px; font-weight:650; text-decoration:none; font-size:16px; }
+  .btn-primary { background:#fff; color:#1e40af; box-shadow:0 8px 24px rgba(0,0,0,.18); }
+  .btn-primary:hover { background:#eef3ff; }
+  .btn-ghost { color:#fff; border:1.5px solid rgba(255,255,255,.55); margin-left:10px; }
+  .btn-ghost:hover { background:rgba(255,255,255,.1); }
+  .fine { font-size:13.5px; color:#c8d6ff; margin-top:14px; }
+  .shot { width:100%; border-radius:14px; box-shadow:0 24px 64px rgba(0,0,0,.35); display:block; }
+  section { padding:64px 0; }
+  h2 { font-size:32px; margin:0 0 10px; letter-spacing:-.01em; }
+  .sub { color:var(--muted); margin:0 0 34px; font-size:17px; }
+  .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:22px; }
+  .card h3 { margin:6px 0 6px; font-size:18px; }
+  .card p { margin:0; color:var(--muted); font-size:15px; }
+  .emoji { font-size:26px; }
+  .gallery { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  .gallery figure { margin:0; }
+  .gallery img { width:100%; border-radius:12px; border:1px solid var(--border); display:block; }
+  .gallery figcaption { color:var(--muted); font-size:14.5px; margin-top:8px; text-align:center; }
+  ol.steps { counter-reset:s; list-style:none; padding:0; display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  ol.steps li { counter-increment:s; background:var(--card); border:1px solid var(--border); border-radius:14px; padding:22px; }
+  ol.steps li::before { content:counter(s); display:inline-flex; width:32px; height:32px; border-radius:50%; background:var(--accent); color:#fff; align-items:center; justify-content:center; font-weight:700; margin-bottom:10px; }
+  details { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px 20px; margin-bottom:10px; }
+  summary { font-weight:600; cursor:pointer; font-size:16.5px; }
+  details p { color:var(--muted); margin:10px 0 0; }
+  .cta { text-align:center; background:linear-gradient(120deg,#2563eb,#1e40af); color:#fff; border-radius:18px; padding:44px 24px; }
+  .cta p { color:#dbe6ff; }
+  footer { color:var(--muted); font-size:14px; padding:34px 0 48px; text-align:center; }
+  @media (max-width: 900px) { .hero-grid, .grid3, .gallery, ol.steps { grid-template-columns:1fr; } h1 { font-size:36px; } nav .links { display:none; } }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="./"><img src="icon.png" alt="PDF Signature logo" width="40" height="40">PDF Signature</a>
+      <div class="links"><a href="#features">Features</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="https://github.com/asadal12/pdf-signature">GitHub</a></div>
+    </nav>
+    <div class="hero-grid">
+      <div>
+        <h1>Sign PDFs and fill in forms on Windows, free and offline</h1>
+        <p class="lead">Draw, type or upload your signature, fill in PDF forms, add dates and checkmarks, and save. No printing, no scanning, no account, no upload.</p>
+        <a class="btn btn-primary" href="https://github.com/asadal12/pdf-signature/releases/latest">⬇ Download for Windows</a>
+        <a class="btn btn-ghost" href="https://github.com/asadal12/pdf-signature">View source</a>
+        <p class="fine">Windows 10 &amp; 11 (64-bit) · Installer or portable · MIT open-source license</p>
+      </div>
+      <img class="shot" src="screenshots/editor.png" alt="Signing a lease agreement PDF with PDF Signature: typed signature in a signature field, drawn signature, dates and filled form fields" width="1440" height="900">
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="features">
+  <div class="wrap">
+    <h2>Everything you need to sign a PDF</h2>
+    <p class="sub">A fast, private PDF signing app for contracts, leases, school forms, HR paperwork, invoices and more.</p>
+    <div class="grid3">
+      <div class="card"><div class="emoji">✍️</div><h3>Draw your signature</h3><p>Sign with a mouse, touchpad, finger or stylus. Pen pressure and speed-sensitive ink look like real handwriting.</p></div>
+      <div class="card"><div class="emoji">⌨️</div><h3>Type it</h3><p>Type your name and pick one of 8 handwriting fonts. Initials are supported too.</p></div>
+      <div class="card"><div class="emoji">📷</div><h3>Upload a photo</h3><p>Use a picture of your signature. The paper background is removed automatically.</p></div>
+      <div class="card"><div class="emoji">📝</div><h3>Fill PDF forms</h3><p>Text fields, checkboxes, radio buttons and dropdowns, filled right on the page. They stay editable in the saved file.</p></div>
+      <div class="card"><div class="emoji">🖊️</div><h3>Click-to-sign fields</h3><p>"Sign here" boxes are detected automatically, and your signature is fitted into the box.</p></div>
+      <div class="card"><div class="emoji">📅</div><h3>Text, dates &amp; marks</h3><p>Add text in any size and color, dates in 6 formats, checkmarks, crosses, dots, logos and stamps.</p></div>
+      <div class="card"><div class="emoji">🎯</div><h3>Exact placement</h3><p>What you see is what you get, even on rotated or cropped pages. Added text stays real, selectable PDF text.</p></div>
+      <div class="card"><div class="emoji">🔒</div><h3>Private by design</h3><p>100% offline. Your documents and signatures never leave your computer. No account, no tracking.</p></div>
+      <div class="card"><div class="emoji">⚡</div><h3>Lightweight &amp; free</h3><p>Open a PDF, sign, save. Undo/redo, saved signatures, dark mode and keyboard shortcuts.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="gallery">
+      <figure><img src="screenshots/signature-draw.png" alt="Draw a handwritten signature with mouse, touch or pen" loading="lazy" width="1440" height="900"><figcaption>Draw with mouse, touch or pen</figcaption></figure>
+      <figure><img src="screenshots/signature-type.png" alt="Type your signature in handwriting fonts" loading="lazy" width="1440" height="900"><figcaption>Type it in 8 handwriting styles</figcaption></figure>
+      <figure><img src="screenshots/form-filling.png" alt="Fill in a PDF form: text fields, radio buttons and checkboxes" loading="lazy" width="1440" height="900"><figcaption>Fill in PDF forms</figcaption></figure>
+      <figure><img src="screenshots/dark-mode.png" alt="PDF Signature dark mode" loading="lazy" width="1440" height="900"><figcaption>Light and dark mode</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How to sign a PDF in 3 steps</h2>
+    <p class="sub">Most documents take less than a minute.</p>
+    <ol class="steps">
+      <li><h3>Open your PDF</h3><p>Click <b>Open PDF</b> or drag the file onto the window. Fill in any highlighted form fields.</p></li>
+      <li><h3>Add your signature</h3><p>Draw, type or upload it, then drag it into place and resize it. Or click a "Sign here" field.</p></li>
+      <li><h3>Save</h3><p>Click <b>Save</b> to get a new <i>-signed.pdf</i> file, ready to email, upload or print. Your original is never overwritten.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <h2>Frequently asked questions</h2>
+    <p class="sub">&nbsp;</p>
+    <details><summary>Is PDF Signature really free?</summary><p>Yes. It's free and open source (MIT license), with no ads, watermarks, trials or sign-up.</p></details>
+    <details><summary>Are my documents uploaded to the cloud?</summary><p>No. Everything happens locally on your PC, and the app works without an internet connection.</p></details>
+    <details><summary>Can I fill out PDF forms with it?</summary><p>Yes. Standard fillable PDF forms (AcroForm) are supported, including signature fields. Dynamic XFA forms (an older Adobe LiveCycle format) are not.</p></details>
+    <details><summary>Is the signature legally binding?</summary><p>PDF Signature adds a visual electronic signature (an image of your handwritten signature), as if you signed a printout and scanned it. That's accepted for many everyday documents. It isn't a certificate-based cryptographic digital signature (PAdES/QES), which some legal processes require.</p></details>
+    <details><summary>Windows says "Windows protected your PC". Is it safe?</summary><p>The app isn't code-signed yet, so SmartScreen shows a warning for new apps. Click <b>More info → Run anyway</b>. The complete source code is public on GitHub.</p></details>
+    <details><summary>Does it work on a touchscreen or with a stylus?</summary><p>Yes. Finger and pen input are supported, including pen pressure for natural-looking strokes.</p></details>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Sign your next PDF in seconds</h2>
+      <p>Free for Windows 10 &amp; 11. No account required.</p>
+      <a class="btn btn-primary" href="https://github.com/asadal12/pdf-signature/releases/latest">⬇ Download PDF Signature</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">PDF Signature · MIT License · © 2026 Ali Arshad Sadal · <a href="https://github.com/asadal12/pdf-signature">Source code on GitHub</a></div>
+</footer>
+</body>
+</html>
