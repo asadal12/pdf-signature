@@ -73,7 +73,8 @@
           ]
         }
       ],
-      "icon": "build/icon.ico"
+      "icon": "build/icon.ico",
+      "artifactName": "PDF-Signature-${version}-win-x64-portable.${ext}"
     },
     "nsis": {
       "oneClick": false,
@@ -96,9 +97,6 @@
         "icon": "build/icon.ico"
       }
     ],
-    "publish": null,
-    "zip": {
-      "artifactName": "PDF-Signature-${version}-win-x64-portable.${ext}"
-    }
+    "publish": null
   }
 }
