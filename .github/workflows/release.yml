@@ -1,0 +1,50 @@
+name: Build & release (Windows)
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build installer and portable zip
+        run: npx electron-builder --win --x64 --publish never
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+
+      - name: List artifacts
+        shell: pwsh
+        run: Get-ChildItem dist -File | Format-Table Name, Length
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdf-signature-windows
+          path: |
+            dist/*.exe
+            dist/*.zip
+
+      - name: Publish GitHub release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          name: PDF Signature ${{ github.ref_name }}
+          body_path: .github/release-notes.md
+          make_latest: true
+          files: |
+            dist/PDF-Signature-Setup-*.exe
+            dist/PDF-Signature-*-win-x64-portable.zip
