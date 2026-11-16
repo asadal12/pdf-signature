@@ -84,7 +84,8 @@
       "shortcutName": "PDF Signature",
       "artifactName": "PDF-Signature-Setup-${version}.${ext}",
       "installerIcon": "build/icon.ico",
-      "uninstallerIcon": "build/icon.ico"
+      "uninstallerIcon": "build/icon.ico",
+      "deleteAppDataOnUninstall": false
     },
     "fileAssociations": [
       {
